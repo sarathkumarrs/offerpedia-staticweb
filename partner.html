@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partner with us — Offerpedia</title><meta name="description" content="Bring customers back with cashback, coupons and stamp cards.">
+<link rel="icon" type="image/png" href="logo.png"><link rel="stylesheet" href="site.css"></head>
+<body><header class="top"><nav class="nav">
+  <a href="index.html" class="brand" aria-label="Offerpedia home"><img src="logo.png" alt="" class="brand-logo"><span class="brand-name">offerpedia</span></a>
+  <div class="nav-actions">
+    <a href="explore.html" class="nav-link hide-sm">Explore</a>
+    <a href="partner.html" class="nav-link hide-sm">Partner with us</a>
+    <a href="app.html" class="nav-link hide-sm">Get the App</a>
+    <a href="signin.html" class="btn-dark">Sign in</a>
+  </div></nav>
+  <div class="page-head"><h1>Own a store? Partner with us</h1><p>Bring customers back with cashback, coupons and stamp cards.</p></div></header><main><div class="wrap narrow">
+<div class="perk-grid"><div class="perk"><strong>Turn walk-ins into regulars</strong><p>Reward every visit with cashback, coupons or stamps.</p></div>
+<div class="perk"><strong>Grow repeat visits</strong><p>Give customers a reason to come back next week.</p></div>
+<div class="perk"><strong>Set up in minutes</strong><p>No app or POS integration. Just display your QR.</p></div></div>
+<div class="card-form" style="max-width:none"><form id="pf"><h2>Partner with Offerpedia</h2><p>Tell us about your store and we'll get in touch.</p>
+<label class="field"><span>Store name</span><input name="store" required></label>
+<label class="field"><span>Your name</span><input name="name" required></label>
+<label class="field"><span>Phone / WhatsApp</span><input name="phone" type="tel" required></label>
+<label class="field"><span>Email</span><input name="email" type="email" required></label>
+<label class="field"><span>Category</span><select name="cat"><option>Food &amp; Beverage</option><option>Salon &amp; Beauty</option><option>Shopping</option><option>Electronics</option><option>Fitness</option><option>Health &amp; Wellness</option><option>Other</option></select></label>
+<button class="btn-green" type="submit">Send request</button></form>
+<div id="pdone" hidden class="ok-box">Opening your email app with your request. Just press send, and we'll reply soon.</div></div></div></main><footer class="footer"><div class="footer-inner">
+  <a href="index.html" class="footer-brand"><img src="logo.png" alt=""> offerpedia</a>
+  <nav class="footer-links"><a href="explore.html">Explore</a><a href="signin.html">Sign in</a><a href="partner.html">Partner with us</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></nav>
+  <span class="copyright">&copy; <span id="year"></span> Offerpedia</span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script><script>
+document.getElementById('pf').addEventListener('submit',function(e){e.preventDefault();var f=this,v=function(n){return f.elements[n].value};
+ var b='Store: '+v('store')+'\nName: '+v('name')+'\nPhone: '+v('phone')+'\nEmail: '+v('email')+'\nCategory: '+v('cat');
+ window.location.href='mailto:hello@offerpedia.org?subject='+encodeURIComponent('Partner request: '+v('store'))+'&body='+encodeURIComponent(b);
+ f.hidden=true;document.getElementById('pdone').hidden=false;});
+</script></body></html>
