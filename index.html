@@ -98,7 +98,7 @@ button, input, select { font: inherit; }
 .footer-inner { max-width: 1200px; margin: 0 auto; padding: 28px 24px 36px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .footer-brand { display: inline-flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 800; letter-spacing: -0.6px; }
 .footer-brand img { width: 32px; height: 32px; border-radius: 9px; }
-.footer-links { display: flex; gap: 22px; }
+.footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
 .footer-links a { color: #3b4150; text-decoration: none; font-weight: 600; font-size: 14px; }
 .copyright { color: var(--muted); font-size: 13px; }
 
@@ -268,15 +268,15 @@ button, input, select { font: inherit; }
   <header class="hero">
     <!-- LandingNav -->
     <nav class="nav">
-      <a href="/" class="brand" aria-label="Offerpedia home">
+      <a href="index.html" class="brand" aria-label="Offerpedia home">
         <img src="logo.png" alt="" class="brand-logo" />
         <span class="brand-name">offerpedia</span>
       </a>
       <div class="nav-actions">
-        <a href="/rewards/explore" class="nav-link hide-sm">Explore</a>
-        <a href="#" class="nav-link hide-sm" data-signup hidden>Partner with us</a>
+        <a href="explore.html" class="nav-link hide-sm">Explore</a>
+        <a href="partner.html" class="nav-link hide-sm" data-signup>Partner with us</a>
         <button type="button" class="btn-outline hide-sm" id="get-app-btn">Get the App <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
-        <a href="/rewards/login?redirect=%2Frewards%2Fme" class="btn-dark">Sign in</a>
+        <a href="signin.html" class="btn-dark">Sign in</a>
       </div>
     </nav>
 
@@ -302,7 +302,7 @@ button, input, select { font: inherit; }
       <h1>Shop local. Earn rewards everywhere.</h1>
       <p class="hero-sub">Cashback, coupons and stamp cards from your favourite neighbourhood stores — all in one app, just by scanning a QR at the counter.</p>
 
-      <form class="search-row" role="search" action="/rewards/explore" method="get" id="search-form">
+      <form class="search-row" role="search" action="explore.html" method="get" id="search-form">
         <label class="select-box">
           <select name="category" aria-label="Choose a category">
             <option value="">All categories</option>
@@ -323,7 +323,7 @@ button, input, select { font: inherit; }
       </form>
 
       <div class="cards">
-        <a href="/rewards/explore" class="card green">
+        <a href="explore.html?type=cashback" class="card green">
           <div class="card-text">
             <h2>CASHBACK</h2>
             <p>On every visit</p>
@@ -332,7 +332,7 @@ button, input, select { font: inherit; }
           <span class="card-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           <div class="card-art" aria-hidden="true"><div class="blob"></div><div class="art-disc"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div></div>
         </a>
-        <a href="/rewards/explore" class="card rose">
+        <a href="explore.html?type=coupon" class="card rose">
           <div class="card-text">
             <h2>COUPONS</h2>
             <p>Unlock discounts</p>
@@ -341,7 +341,7 @@ button, input, select { font: inherit; }
           <span class="card-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           <div class="card-art" aria-hidden="true"><div class="blob"></div><div class="art-disc"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div></div>
         </a>
-        <a href="/rewards/explore" class="card violet">
+        <a href="explore.html?type=stamps" class="card violet">
           <div class="card-text">
             <h2>STAMP CARDS</h2>
             <p>Collect &amp; get it free</p>
@@ -358,13 +358,13 @@ button, input, select { font: inherit; }
   <section class="section" id="cat-section">
     <h2 class="section-title">Explore by category</h2>
     <div class="cat-row" id="cat-row">
-      <a href="/rewards/explore?category=food" class="cat" data-cat="food"><span class="cat-icon" style="background:#fdf1e4;color:#c26b1a"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></svg></span><strong>Food &amp; Beverage</strong><span class="cat-count"></span></a>
-      <a href="/rewards/explore?category=salon_beauty" class="cat" data-cat="salon_beauty"><span class="cat-icon" style="background:#fdeaf1;color:#d6336c"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"/><circle cx="12" cy="8" r="2"/><path d="M12 10v12"/><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/></svg></span><strong>Salon &amp; Beauty</strong><span class="cat-count"></span></a>
-      <a href="/rewards/explore?category=shopping" class="cat" data-cat="shopping"><span class="cat-icon" style="background:#efeafd;color:#6d3fd6"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span><strong>Shopping</strong><span class="cat-count"></span></a>
-      <a href="/rewards/explore?category=electronics" class="cat" data-cat="electronics"><span class="cat-icon" style="background:#e8f1fd;color:#1f6fe0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></span><strong>Electronics</strong><span class="cat-count"></span></a>
-      <a href="/rewards/explore?category=fitness" class="cat" data-cat="fitness"><span class="cat-icon" style="background:#e6f6ec;color:#16a34a"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg></span><strong>Fitness</strong><span class="cat-count"></span></a>
-      <a href="/rewards/explore?category=health" class="cat" data-cat="health"><span class="cat-icon" style="background:#fdecec;color:#e11d48"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span><strong>Health &amp; Wellness</strong><span class="cat-count"></span></a>
-      <a href="/rewards/explore?category=other" class="cat" data-cat="other"><span class="cat-icon" style="background:#f1f2f4;color:#4b5261"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"/></svg></span><strong>Other</strong><span class="cat-count"></span></a>
+      <a href="explore.html?category=food" class="cat" data-cat="food"><span class="cat-icon" style="background:#fdf1e4;color:#c26b1a"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></svg></span><strong>Food &amp; Beverage</strong><span class="cat-count"></span></a>
+      <a href="explore.html?category=salon_beauty" class="cat" data-cat="salon_beauty"><span class="cat-icon" style="background:#fdeaf1;color:#d6336c"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"/><circle cx="12" cy="8" r="2"/><path d="M12 10v12"/><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/></svg></span><strong>Salon &amp; Beauty</strong><span class="cat-count"></span></a>
+      <a href="explore.html?category=shopping" class="cat" data-cat="shopping"><span class="cat-icon" style="background:#efeafd;color:#6d3fd6"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span><strong>Shopping</strong><span class="cat-count"></span></a>
+      <a href="explore.html?category=electronics" class="cat" data-cat="electronics"><span class="cat-icon" style="background:#e8f1fd;color:#1f6fe0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></span><strong>Electronics</strong><span class="cat-count"></span></a>
+      <a href="explore.html?category=fitness" class="cat" data-cat="fitness"><span class="cat-icon" style="background:#e6f6ec;color:#16a34a"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg></span><strong>Fitness</strong><span class="cat-count"></span></a>
+      <a href="explore.html?category=health" class="cat" data-cat="health"><span class="cat-icon" style="background:#fdecec;color:#e11d48"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span><strong>Health &amp; Wellness</strong><span class="cat-count"></span></a>
+      <a href="explore.html?category=other" class="cat" data-cat="other"><span class="cat-icon" style="background:#f1f2f4;color:#4b5261"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"/></svg></span><strong>Other</strong><span class="cat-count"></span></a>
     </div>
   </section>
 
@@ -398,7 +398,7 @@ button, input, select { font: inherit; }
   <section class="section" id="featured-section" hidden>
     <div class="section-head">
       <h2 class="section-title">Stores on Offerpedia</h2>
-      <a href="/rewards/explore" class="see-all">See all <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a href="explore.html" class="see-all">See all <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
     <div class="featured" id="featured"></div>
   </section>
@@ -410,7 +410,7 @@ button, input, select { font: inherit; }
         <div class="mini-brand"><img src="logo.png" alt="" /> offerpedia</div>
         <h2>Get the Offerpedia app now!</h2>
         <p>Your rewards from every store, in your pocket.</p>
-        <a href="/app" class="app-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Get the App</a>
+        <a href="app.html" class="app-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Get the App</a>
       </div>
       <div class="phone-area">
         <div class="float f1" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
@@ -440,7 +440,7 @@ button, input, select { font: inherit; }
           <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"/></svg> Set up in minutes</li>
         </ul>
       </div>
-      <a href="#" class="partner-btn" data-signup hidden>Partner with us <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a href="partner.html" class="partner-btn" data-signup>Partner with us <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
   </section>
 
@@ -448,9 +448,11 @@ button, input, select { font: inherit; }
     <div class="footer-inner">
       <div class="footer-brand"><img src="logo.png" alt="" /> offerpedia</div>
       <nav class="footer-links">
-        <a href="/rewards/explore">Explore</a>
-        <a href="/rewards/login?redirect=%2Frewards%2Fme">Sign in</a>
-        <a href="#" data-signup hidden>Partner with us</a>
+        <a href="explore.html">Explore</a>
+        <a href="signin.html">Sign in</a>
+        <a href="partner.html" data-signup>Partner with us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
       </nav>
       <span class="copyright">© <span id="year"></span> Offerpedia</span>
     </div>
@@ -1113,13 +1115,13 @@ var QR = qrcodegen;
     if (q) p.set('q', q);
     if (this.category.value) p.set('category', this.category.value);
     var qs = p.toString();
-    window.location.href = '/rewards/explore' + (qs ? '?' + qs : '');
+    window.location.href = 'explore.html' + (qs ? '?' + qs : '');
   });
 
   // QR for the /app smart link (rendered as SVG, ECC level H).
   (function renderQR() {
-    var origin = /^https?:$/.test(location.protocol) ? location.origin : 'https://offerpedia.app';
-    var qr = qrcodegen.QrCode.encodeText(origin + '/app', qrcodegen.QrCode.Ecc.HIGH);
+    var origin = /^https?:$/.test(location.protocol) ? location.origin : 'https://offerpedia.org';
+    var qr = qrcodegen.QrCode.encodeText(origin + '/app.html', qrcodegen.QrCode.Ecc.HIGH);
     var n = qr.size, d = '';
     for (var y = 0; y < n; y++) for (var x = 0; x < n; x++) if (qr.getModule(x, y)) d += 'M' + x + ' ' + y + 'h1v1h-1z';
     var svg = document.getElementById('qr');
@@ -1130,7 +1132,7 @@ var QR = qrcodegen;
 
   function setSignup(url) {
     if (!url) return;
-    document.querySelectorAll('[data-signup]').forEach(function (a) { a.href = url; a.hidden = false; });
+    document.querySelectorAll('[data-signup]').forEach(function (a) { a.href = url; });
   }
 
   function unwrap(json) {
@@ -1192,7 +1194,7 @@ var QR = qrcodegen;
     var name = v.organization_name || '';
     var profile = v.profile || {};
     var a = el('a', 'vendor');
-    a.href = '/rewards/me/' + encodeURIComponent(v.organization_id);
+    a.href = 'explore.html?q=' + encodeURIComponent(name);
 
     var cover = el('div', 'vendor-cover');
     cover.style.background = heroBackground(name, profile.cover_url);
